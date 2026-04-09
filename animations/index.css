@@ -1,0 +1,30 @@
+/* ================================================== */
+/* NON-VISIBLE ELEMENTS */
+/* ================================================== */
+
+.hero .content > *,
+.brief .section > *,
+.selected .section > *,
+.trust .numbers .number,
+.featured .section > *,
+.offers .section > * {
+    transform: translateY(60px);
+    opacity: 0;
+    transition:
+        transform 0.5s cubic-bezier(0.7,0.1,0.5,0.9),
+        opacity 0.7s;
+}
+
+/* ================================================== */
+/* VISIBLE ELEMENTS */
+/* ================================================== */
+
+.hero .visible .content > *,
+.brief .visible > *,
+.selected .visible > *,
+.trust .visible .number,
+.featured .visible > *,
+.offers .visible > * {
+    transform: translateY(0);
+    opacity: 1;
+}

@@ -61,6 +61,26 @@
 }
 
 /* ================================================== */
+/* OFFERS */
+/* ================================================== */
+
+.offers .grid { grid-template-columns: repeat(auto-fit, minmax(min(448px, 100%), 1fr)); }
+.offers .offer { position: relative; }
+
+.offers .offer .text-content {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    backdrop-filter: blur(5px);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+    background-color: var(--color-surface-alt);
+}
+
+.offers .offer:hover .text-content { transform: translateY(-10px) rotate(-5deg); }
+
+/* ================================================== */
 /* & RESPONSIVENESS */
 /* ================================================== */
 
