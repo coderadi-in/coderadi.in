@@ -1,0 +1,79 @@
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    height: 100dvh;
+    background-image: url('/assets/images/hero-home.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .content { padding-bottom: 96px; }
+
+/* ================================================== */
+/* BRIEF */
+/* ================================================== */
+
+.brief { min-height: 100vh; }
+.brief .grid { grid-template-columns: repeat(auto-fit, minmax(min(448px, 100%), 1fr)); }
+
+/* ================================================== */
+/* SELECTED */
+/* ================================================== */
+
+.selected .work {
+    position: relative;
+    aspect-ratio: 32 / 9;
+}
+
+.selected .work .bg.img {
+    position: absolute;
+    aspect-ratio: 32 / 9;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+/* ================================================== */
+/* TRUST */
+/* ================================================== */
+
+.trust .numbers { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.trust .numbers .number {
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-bg-card);
+}
+
+.trust .featured {
+    position: relative;
+    aspect-ratio: 32 / 9;
+}
+
+.trust .featured .bg.img {
+    position: absolute;
+    aspect-ratio: 32 / 9;
+    z-index: -1;
+    inset: 0;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+/* ================================================== */
+/* & RESPONSIVENESS */
+/* ================================================== */
+
+@media (max-width: 1024px) {
+    .selected .work,
+    .selected .work .bg.img,
+    .trust .featured,
+    .trust .featured .bg.img { aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 568px) {
+    .selected .work,
+    .selected .work .bg.img,
+    .trust .featured,
+    .trust .featured .bg.img { aspect-ratio: 2 / 3; }
+}
