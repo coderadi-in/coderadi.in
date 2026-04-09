@@ -3,34 +3,36 @@
 // ==================================================
 
 const sections = document.querySelectorAll(".section");
-
-const heroElements = document.querySelectorAll(".hero .content > *");
-const briefElements = document.querySelectorAll(".brief .section > *");
-const workElements = document.querySelectorAll(".selected .section > *");
-const trustElements = document.querySelectorAll(".trust .numbers .number");
-const featuredElements = document.querySelectorAll(".featured .section > *");
-const offerElements = document.querySelectorAll(".offers .section > *");
+const loader = document.querySelector(".loader");
 
 // ==================================================
 // IMPORTS
 // ==================================================
 
-import { createIntersectionObserver, addTransitionDelay } from './_animations.js';
+import { createIntersectionObserver } from './_animations.js';
 
 // ==================================================
 // INTERSECTION OBSERVER FUNCTIONALITY
 // ==================================================
 
-const observer = createIntersectionObserver();
-sections.forEach(section => observer.observe(section));
+function startSectionObserver() {
+    if (sections.length === 0) { return; }
+
+    const observer = createIntersectionObserver();
+    sections.forEach(section => observer.observe(section));
+}
+
+// * FUNCTION TO HIDE THE LOADER AFTER 5 SECONDS
+function hideLoader() {
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+        startSectionObserver();
+    }, 5000);
+}
 
 // ==================================================
-// TRANSITION DELAY LOGIC
+// EVENT LISTENERS
 // ==================================================
 
-addTransitionDelay(heroElements);
-addTransitionDelay(briefElements);
-addTransitionDelay(workElements);
-addTransitionDelay(trustElements);
-addTransitionDelay(featuredElements);
-addTransitionDelay(offerElements);
+document.addEventListener("DOMContentLoaded", hideLoader);

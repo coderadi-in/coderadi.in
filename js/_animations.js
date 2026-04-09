@@ -32,14 +32,6 @@ export function createIntersectionObserver() {
     return observer;
 }
 
-// * FUNCTION TO ADD INCREASING TRANSITION DELAY TO AN ARRAY ELEMENTS
-export function addTransitionDelay(elements) {
-    elements.forEach((element, index) => {
-        const delay = index * 100;
-        element.style.transitionDelay = `${delay}ms`;
-    });
-}
-
 // ==================================================
 // EVENT LISTENERS
 // ==================================================
