@@ -3,6 +3,7 @@
 // ==================================================
 
 const links = document.querySelectorAll('.link, .ulink');
+const sections = document.querySelectorAll(".section");
 
 // ==================================================
 // FUNCTIONS
@@ -17,7 +18,9 @@ function updateClickAnimation(link) {
 }
 
 // * FUNCTION TO CREATE AN INTERSECTION OBSERVER
-export function createIntersectionObserver() {
+export function startSectionObserver() {
+    if (sections.length === 0) { return; }
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -29,7 +32,8 @@ export function createIntersectionObserver() {
     }, {
         threshold: 0.2
     });
-    return observer;
+    
+    sections.forEach(section => observer.observe(section));
 }
 
 // ==================================================

@@ -58,13 +58,11 @@
     }
 }
 
-
 /* ================================================== */
 /* HERO */
 /* ================================================== */
 
 .hero {
-    height: 100dvh;
     background-image: url('/assets/images/hero-home.webp');
     background-size: cover;
     background-position: center;
@@ -76,7 +74,6 @@
 /* BRIEF */
 /* ================================================== */
 
-.brief { min-height: 100vh; }
 .brief .grid { grid-template-columns: repeat(auto-fit, minmax(min(448px, 100%), 1fr)); }
 
 /* ================================================== */

@@ -221,7 +221,7 @@ html {
 .w-fit { width: fit-content; }
 .h-auto { height: auto; }
 .h-full { height: 100%; }
-.h-screen { height: 100vh; }
+.h-screen { height: 100dvh; }
 .min-h-screen { min-height: 100vh; }
 
 /* ================================================== */

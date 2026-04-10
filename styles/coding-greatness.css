@@ -1,0 +1,129 @@
+/* ================================================== */
+/* ! ANIMATIONS */
+/* ================================================== */
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.solution #mainMockup .content { transform: translateY(0) rotate(0); }
+.solution #mainMockup.visible .content { transform: translateY(-10px) rotate(-5deg); }
+
+@media (prefers-reduced-motion: reduce) {
+    .section,
+    .section.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    background-image: url('/assets/images/hero-cg.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .darken {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-surface-main);
+}
+
+.hero .section { position: relative; }
+
+/* ================================================== */
+/* FOUNDATIONAL ASCENT */
+/* ================================================== */
+
+.foundational-ascent .grid { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+
+.foundational-ascent .article {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.foundational-ascent .article:hover .img { transform: scale(1.05); }
+
+.foundational-ascent .article .img {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.foundational-ascent .article .indicator {
+    background-color: var(--color-surface-alt);
+    backdrop-filter: blur(4px);
+}
+
+/* ================================================== */
+/* FEATURED */
+/* ================================================== */
+
+.featured .body { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+
+.featured .project {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.featured .project:hover .img { transform: scale(1.05); }
+
+.featured .project .img {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform 0.3s;
+    opacity: 0.8;
+}
+
+/* ================================================== */
+/* AUTOBIOGRAPHY */
+/* ================================================== */
+
+.autobiography .top-row .para {
+    max-width: 500px;
+    text-wrap: balance;
+}
+
+.autobiography .body { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+
+.autobiography .body .article {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.autobiography .body .article:hover .img { transform: scale(1.05); }
+
+.autobiography .body .article .img {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: -1;
+    transition: transform 0.3s;
+    opacity: 0.8;
+}

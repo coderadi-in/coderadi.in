@@ -2,25 +2,17 @@
 // ELEMENT REFERENCE
 // ==================================================
 
-const sections = document.querySelectorAll(".section");
 const loader = document.querySelector(".loader");
 
 // ==================================================
 // IMPORTS
 // ==================================================
 
-import { createIntersectionObserver } from './_animations.js';
+import { startSectionObserver } from './_animations.js';
 
 // ==================================================
-// INTERSECTION OBSERVER FUNCTIONALITY
+// FUNCTIONS
 // ==================================================
-
-function startSectionObserver() {
-    if (sections.length === 0) { return; }
-
-    const observer = createIntersectionObserver();
-    sections.forEach(section => observer.observe(section));
-}
 
 // * FUNCTION TO HIDE THE LOADER AFTER 5 SECONDS
 function hideLoader() {
