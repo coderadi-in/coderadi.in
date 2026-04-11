@@ -3,6 +3,7 @@
 // ==================================================
 
 const categoryFilters = document.querySelectorAll('.filter');
+const projects = document.querySelectorAll(".project");
 
 // ==================================================
 // FUNCTIONS
@@ -22,6 +23,17 @@ function addFilterClass(filter) {
     filter.classList.add('fl');
 }
 
+// * FUNCTION TO MANAGE ALL PROJECTS
+function manageProjects(category) {
+    projects.forEach(project => {
+        if (category === 'allProjects' || project.dataset.category === category) {
+            project.classList.remove("hidden");
+        } else {
+            project.classList.add("hidden");
+        }
+    })
+}
+
 // ==================================================
 // EVENT LISTENERS
 // ==================================================
@@ -31,5 +43,6 @@ categoryFilters.forEach((filter) => {
     filter.addEventListener('click', () => {
         removeFilterClasses();
         addFilterClass(filter);
+        manageProjects(filter.id);
     })
 })
