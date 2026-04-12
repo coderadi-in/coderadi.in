@@ -135,6 +135,7 @@ html {
 .cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cols-auto-400 { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
 .rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }
 .rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }
 .rows-3 { grid-template-rows: repeat(3, minmax(0, 1fr)); }

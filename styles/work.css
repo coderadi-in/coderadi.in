@@ -1,0 +1,114 @@
+/* ================================================== */
+/* ! ANIMATIONS */
+/* ================================================== */
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section,
+    .section.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    background-image: url('/assets/images/hero-projects.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .darken {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-surface-main);
+}
+
+/* ================================================== */
+/* IDEAL & SPECS */
+/* ================================================== */
+
+.ideal .patron {
+    padding-left: 8px;
+    border-left: 2px solid var(--color-border);
+}
+
+.ideal .patron .link,
+.specs .spec .link { transition: transform 1.5s linear(0, 0.0096, 0.0362, 0.0765, 0.1276, 0.1866, 0.2513, 0.3195, 0.3894, 0.4593, 0.5279, 0.5943, 0.6574, 0.7167, 0.7717, 0.822, 0.8675, 0.908, 0.9437, 0.9746, 1.001, 1.0231, 1.0412, 1.0555, 1.0665, 1.0744, 1.0797, 1.0826, 1.0835, 1.0827, 1.0805, 1.0771, 1.0729, 1.0679, 1.0625, 1.0568, 1.051, 1.0452, 1.0394, 1.0339, 1.0286, 1.0236, 1.0191, 1.0149, 1.0111, 1.0077, 1.0047, 1.0021, 0.9999, 0.9981, 0.9966, 0.9954, 0.9944, 0.9938, 0.9933, 0.9931, 0.993, 0.9931, 0.9933, 0.9936, 0.9939, 0.9943, 0.9948, 0.9953, 0.9957, 0.9962, 0.9967, 0.9972, 0.9976, 0.998, 0.9984, 0.9988, 0.9991, 0.9994, 0.9996, 0.9998, 1, 1.0002, 1.0003, 1.0004, 1.0005, 1.0005, 1.0006, 1.0006, 1.0006, 1.0006, 1.0006, 1.0005, 1.0005, 1.0005, 1.0004, 1.0004, 1.0004, 1.0003, 1.0003, 1.0002, 1.0002, 1.0002, 1.0001, 1.0001, 1); }
+
+.ideal .patron .link:hover,
+.specs .spec .link:hover { transform: translateX(12px); }
+
+/* ================================================== */
+/* PROCESS */
+/* ================================================== */
+
+.process .illustration {
+    position: relative;
+    max-width: 432px;
+    width: 100%;
+}
+
+.process .illustration .symbol {
+    background-color: var(--color-text-main);
+    color: var(--color-bg-main);
+    opacity: 0.8;
+}
+
+.process .illustration::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 1px dashed var(--color-border);
+    z-index: -1;
+    top: 28px;
+}
+
+.process .stage .content > * { width: 50%; }
+.process .stage .image-content { aspect-ratio: 16 / 9; }
+
+.process .stage .content .para { padding-top: 4px; }
+
+/* ================================================== */
+/* OFFERS */
+/* ================================================== */
+
+.offers .grid { grid-template-columns: repeat(auto-fit, minmax(min(448px, 100%), 1fr)); }
+.offers .offer { position: relative; }
+
+.offers .offer .text-content {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    backdrop-filter: blur(5px);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+    background-color: var(--color-surface-alt);
+}
+
+.offers .offer:hover .text-content { transform: translateY(-10px) rotate(-5deg); }
+
+/* ================================================== */
+/* STRIP */
+/* ================================================== */
+
+.strip .content { background: linear-gradient(45deg, var(--color-bg-card) 50%, var(--color-border) 100%); }
