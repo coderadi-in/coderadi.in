@@ -1,0 +1,37 @@
+/* ================================================== */
+/* ! ANIMATIONS */
+/* ================================================== */
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section,
+    .section.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    background-image: url('/assets/images/hero-spare.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
