@@ -87,7 +87,7 @@ html {
 }
 
 @media (max-width: 568px) {
-    .section { padding: 20px !important; }
+    .section.p-48 { padding: 20px !important; }
 }
 
 /* ================================================== */
@@ -170,13 +170,15 @@ html {
 .m-auto { margin: auto; }
 .mx-auto { margin: 0 auto;}
 
-.mv-4 { margin: 4px 0; }
-.mv-8 { margin: 8px 0; }
-.mv-12 { margin: 12px 0; }
-.mv-16 { margin: 16px 0; }
-.mv-20 { margin: 20px 0; }
-.mv-24 { margin: 24px 0; }
-.mv-32 { margin: 32px 0; }
+.mv-4 { margin-top: 4px; margin-bottom: 4px; }
+.mv-8 { margin-top: 8px; margin-bottom: 8px; }
+.mv-12 { margin-top: 12px; margin-bottom: 12px; }
+.mv-16 { margin-top: 16px; margin-bottom: 16px; }
+.mv-20 { margin-top: 20px; margin-bottom: 20px; }
+.mv-24 { margin-top: 24px; margin-bottom: 24px; }
+.mv-32 { margin-top: 32px; margin-bottom: 32px; }
+.mv-48 { margin-top: 48px; margin-bottom: 48px; }
+.mv-64 { margin-top: 64px; margin-bottom: 64px; }
 
 .mh-4 { margin: 0 4px; }
 .mh-8 { margin: 0 8px; }
